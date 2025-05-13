@@ -1,91 +1,89 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome</title>
+  <title>Loan Application</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: black;
-      color: white;
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #6a3093, #a044ff);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
     }
 
-    .container {
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      width: 320px;
       text-align: center;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
-    }
-
-    h1, h2 {
-      margin: 10px 0;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #00ffcc;
-      animation: scaleUp 3s ease-in-out;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
-      font-size: 2em;
-      color: #ffffff;
-      animation: fadeInText 4s ease-in forwards;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    #amount {
+      font-size: 30px;
+      margin: 10px 0;
+      color: #000;
     }
 
-    @keyframes scaleUp {
-      0% {
-        transform: scale(0.5);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+    input[type="range"] {
+      width: 100%;
+      margin: 20px 0;
     }
 
-    @keyframes fadeInText {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    #returnAmount {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .apply-btn {
+      margin-top: 20px;
+      background-color: #f5a623;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .apply-btn:hover {
+      background-color: #d48806;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>ආයුබෝවන්</h1>
-    <h1>CapitalLanka</h1>
-    <h2>සාදරයෙන් පිළිගන්නවා</h2>
+
+  <div class="card">
+    <h2>How much money do you need?</h2>
+    <div id="amount">Rs. 5000</div>
+    <input type="range" min="1000" max="100000" value="5000" step="500" id="loanRange">
+    <div id="returnAmount">You return: Rs. 5000</div>
+    <button class="apply-btn">APPLY LOAN</button>
   </div>
 
   <script>
-    // Optional: After 6 seconds, redirect to another page or hide animation
-    setTimeout(() => {
-      document.querySelector('.container').style.display = 'none';
-      // window.location.href = "main.html"; // Uncomment this to redirect
-    }, 6000);
+    const range = document.getElementById('loanRange');
+    const amountText = document.getElementById('amount');
+    const returnAmount = document.getElementById('returnAmount');
+
+    range.addEventListener('input', () => {
+      const value = parseInt(range.value);
+      amountText.textContent = Rs. ${value};
+      returnAmount.textContent = You return: Rs. ${value};
+    });
   </script>
+
 </body>
 </html>
