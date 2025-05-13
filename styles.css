@@ -1,0 +1,55 @@
+body {
+  font-family: 'Noto Sans Sinhala', sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+}
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.step.active {
+  background: teal;
+}
+.form-step {
+  display: none;
+  flex-direction: column;
+}
+.form-step.active {
+  display: flex;
+}
+label {
+  margin-top: 10px;
+}
+input, select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: teal;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}

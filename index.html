@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <title>පෝරමය</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>පෙළගැස්ම පෝරමය</h2>
+    <div class="progress-bar">
+      <div class="step active">1</div>
+      <div class="step">2</div>
+      <div class="step">3</div>
+      <div class="step">4</div>
+    </div>
+
+    <form id="multi-step-form">
+      <div class="form-step active">
+        <label>මුල් නම</label>
+        <input type="text" name="first_name">
+        <label>අවසන් නම</label>
+        <input type="text" name="last_name">
+        <label>උපන්දිනය</label>
+        <input type="date" name="dob">
+        <label>ජාතික හැඳුනුම්පත් අංකය</label>
+        <input type="text" name="nic">
+        <label>විවාහක / අවිවාහක තත්වය</label>
+        <select name="marital_status">
+          <option>විවාහක</option>
+          <option>අවිවාහක</option>
+        </select>
+        <button type="button" class="next">ඊළඟ</button>
+      </div>
+
+      <div class="form-step">
+        <h3>ඇපකරුවන්ගේ විස්තර</h3>
+        <label>ඇපකරු 1 නම</label>
+        <input type="text" name="guarantor1">
+        <label>ඇපකරු 1 ජා.හැ.අංකය</label>
+        <input type="text" name="guarantor1_nic">
+        <label>ඇපකරු 2 නම</label>
+        <input type="text" name="guarantor2">
+        <label>ඇපකරු 2 ජා.හැ.අංකය</label>
+        <input type="text" name="guarantor2_nic">
+        <button type="button" class="prev">පෙර</button>
+        <button type="button" class="next">ඊළඟ</button>
+      </div>
+
+      <div class="form-step">
+        <h3>ID හා selfie</h3>
+        <label>ID Card Front</label>
+        <input type="file" accept="image/*">
+        <label>ID Card Back</label>
+        <input type="file" accept="image/*">
+        <label>Selfie</label>
+        <input type="file" accept="image/*">
+        <button type="button" class="prev">පෙර</button>
+        <button type="button" class="next">ඊළඟ</button>
+      </div>
+
+      <div class="form-step">
+        <h3>ගිණුම් විස්තර</h3>
+        <label>බැංකු නම</label>
+        <input type="text" name="bank_name">
+        <label>ගිණුම් අංකය</label>
+        <input type="text" name="account_number">
+        <label>ශාඛාව</label>
+        <input type="text" name="branch">
+        <button type="button" class="prev">පෙර</button>
+        <button type="submit">සම්පූර්ණ කරන්න</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
