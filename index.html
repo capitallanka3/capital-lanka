@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+
+    h1, h2 {
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #00ffcc;
+      animation: scaleUp 3s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #ffffff;
+      animation: fadeInText 4s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ආයුබෝවන්</h1>
+    <h1>CapitalLanka</h1>
+    <h2>සාදරයෙන් පිළිගන්නවා</h2>
+  </div>
+
+  <script>
+    // Optional: After 6 seconds, redirect to another page or hide animation
+    setTimeout(() => {
+      document.querySelector('.container').style.display = 'none';
+      // window.location.href = "main.html"; // Uncomment this to redirect
+    }, 6000);
+  </script>
+</body>
+</html>
