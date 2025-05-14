@@ -2,23 +2,35 @@
 <html lang="si">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capital Online Loan Lanka</title>
     <style>
         body {
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            background-color: white;
             margin: 0;
             padding: 0;
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
         }
-        .welcome-text {
-            color: #0047AB; /* නිල් පාට */
-            font-size: 28px;
-            margin-top: 20px;
-        }
+
         .logo {
-            max-width: 300px;
-            margin-top: 50px;
+            max-width: 80%;
+            height: auto;
+            margin-top: 40px;
+        }
+
+        .welcome-text {
+            color: #0047AB;
+            font-size: 8vw; /* Mobile-friendly font size */
+            margin-top: 20px;
+            opacity: 1;
+            animation: fadeOut 5s forwards; /* Fade out after 5 seconds */
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; display: none; }
         }
     </style>
 </head>
@@ -28,7 +40,7 @@
     <img src="441B681C-F189-4224-A783-F151C34A0CF0.jpeg" alt="Capital Logo" class="logo">
 
     <!-- Welcome Message -->
-    <div class="welcome-text">ආයුබෝවන් ඔබ සාදරයෙන් පිළිගන්නවා</div>
+    <div class="welcome-text">ආයුබෝවන් ඔබව සාදරයෙන් පිලිගන්නවා</div>
 
 </body>
 </html>
