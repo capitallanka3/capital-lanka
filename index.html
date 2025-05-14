@@ -2,62 +2,58 @@
 <html lang="si">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome - CapitalLanka</title>
+  <title>Welcome to CapitalLanka</title>
   <style>
     body {
       margin: 0;
       background-color: white;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       font-family: 'Segoe UI', sans-serif;
     }
 
-    .welcome-container {
-      text-align: center;
-      font-size: 2.8rem;
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+      animation: fadeInLogo 2s ease-in-out forwards;
+    }
+
+    .welcome {
+      font-size: 2.5em;
+      color: #0056B8; /* Logo එකේ නිල් පාට */
       opacity: 0;
-      animation: fadeIn 2s forwards, fadeOut 2s 6s forwards;
-      color: #66d9ff; /* ලා-නිල් පාට */
-      text-shadow: 0 0 10px #66d9ff,
-                   0 0 20px #66d9ff,
-                   0 0 30px #66d9ff,
-                   0 0 40px #66d9ff;
-      transition: all 0.3s ease-in-out;
+      animation: fadeInText 3s ease-in-out 2s forwards; /* 2s delay after logo */
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeOut {
-      to {
+    @keyframes fadeInLogo {
+      0% {
         opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
       }
     }
 
-    @media (max-width: 600px) {
-      .welcome-container {
-        font-size: 2rem;
-        padding: 0 15px;
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
 <body>
-  <div class="welcome-container" id="welcomeMessage">
-    ආයුබෝවන් CapitalLanka<br>සාදරයෙන් පිළිගන්නවා!
-  </div>
-
-  <script>
-    // Optionally, redirect after animation
-    setTimeout(() => {
-      // Example: window.location.href = "home.html";
-    }, 8000);
-  </script>
+  <img src="logo.jpeg" alt="CapitalLanka Logo" class="logo">
+  <div class="welcome">CapitalLanka වෙත සාදරයෙන් පිළිගන්නවා</div>
 </body>
 </html>
